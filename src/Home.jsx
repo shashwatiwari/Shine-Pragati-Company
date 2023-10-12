@@ -4,26 +4,29 @@ import Contact from "./components/Contact";
 
 const Home = () => (
     <>
-        <div className="bg-primary w-full overflow-hidden">
-            <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className="w-full overflow-hidden">
+            <div className={`${styles.paddingX} ${styles.flexCenter} bg-slate-300/50`}>
                 <div className={`${styles.boxWidth} `}>
                     <Navbar />
                 </div>
             </div>
 
-            <div className={`bg-primary ${styles.flexStart}`}>
+            <div className={`bg-red-600/75 ${styles.flexStart}`}>
                 <div className={`${styles.boxWidth}`}>
                     <Hero />
                 </div>
             </div>
-
-            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+            <div className={` ${styles.paddingX} ${styles.flexCenter}`}>
                 <div className={`${styles.boxWidth}`}>
                     <Stats />
                     <Business />
                     <Clients />
                     <CTA />
                     <Contact />
+                </div>
+            </div>
+            <div className={` ${styles.paddingX} ${styles.flexCenter} bg-slate-400/25`}>
+                <div className={`${styles.boxWidth}`}>
                     <Footer />
                 </div>
             </div>

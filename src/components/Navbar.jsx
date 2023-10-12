@@ -3,19 +3,24 @@ import { Link } from 'react-router-dom';
 import { close, menu, LOGO } from "../assets";
 import { navLinks } from "../constants";
 
+
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
+  const iconStyle = {
+    filter: 'invert(1)',
+  };
+
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar ">
       <img src={LOGO} alt="hoobank" className="w-[70px] h-[60px]" />
-      <h1 className=" text-white text-3xl font-bold font-poppins lg:text-4xl">ShinePragati</h1>
+      <h1 className=" text-black text-3xl font-bold font-poppins lg:text-4xl">ShinePragati</h1>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-black" : "text-slate-900"
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
@@ -33,7 +38,8 @@ const Navbar = () => {
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain"
+          className="w-[28px] h-[28px] object-contain color-black"
+          style={iconStyle}
           onClick={() => setToggle(!toggle)}
         />
 

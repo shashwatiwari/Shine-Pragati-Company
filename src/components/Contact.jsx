@@ -17,8 +17,8 @@ function ContactUs() {
     };
 
     return (
-        <div id="contact" className="container mx-auto mt-18">
-            <h1 className="text-5xl text-white font-bold mb-6 justify-center">Contact Us</h1>
+        <div id="contact" className="container mx-auto mt-18 ">
+            <h1 className="text-5xl text-primary font-bold mb-6 justify-center">Contact Us</h1>
             <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -26,7 +26,7 @@ function ContactUs() {
                             type="text"
                             name="name"
                             placeholder="Name"
-                            className="w-full border border-gray-400 rounded-md p-2 bg-slate-900 text-white"
+                            className="w-full border  border-slate-600 rounded-md p-2 bg-slate-200/25 text-slate-800"
                             required
                             value={formData.name}
                             onChange={handleInputChange}
@@ -38,7 +38,7 @@ function ContactUs() {
                                 type="email"
                                 name="email"
                                 placeholder="Email"
-                                className="w-full border border-gray-400 rounded-md p-2  bg-slate-900 text-white"
+                                className="w-full border  border-gray-400 rounded-md p-2  bg-slate-200/25 text-slate-800"
                                 required
                                 value={formData.email}
                                 onChange={handleInputChange}
@@ -49,7 +49,7 @@ function ContactUs() {
                         <textarea
                             name="message"
                             placeholder="Message"
-                            className="w-full border border-gray-400 rounded-md p-4 bg-slate-900 text-white font-poppins"
+                            className="w-full border border-gray-400 rounded-md p-4 bg-slate-200/25 text-slate-800 font-poppins"
                             rows="4"
                             required
                             value={formData.message}
@@ -59,7 +59,7 @@ function ContactUs() {
                 </div>
                 <button
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 mt-6 rounded-md"
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 mt-4 rounded-md mb-6"
                 >
                     Submit
                 </button>
